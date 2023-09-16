@@ -1,2 +1,2 @@
 # Cs260
-cs 260 
+[Notes for class] (startup/notes.md)
