@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Quote</title>
+    <div class="user">
+        Username:
+        <span class="user">Login</span>
+      </div>
+</head>
+<body>
+    <menu>
+        <li><a href="startup.html">Home</a></li>
+        <li><a href="login.html">Login or an crate account</a></li>
+        <li><a href="quote.html">Request a quote</a></li>
+        <li><a href="services.html">Services</a></li>
+    </menu>
+    <h1>Request a quote</h1>
+    <form>
+    <li>
+        <fieldset>
+            <legend>File type</legend>
+            <label for="checkbox1">.stl</label>
+            <input type="checkbox" value="checkbox1" /> 
+            <label for="checkbox2">.cad</label>
+            <input type="checkbox" value="checkbox2" /> 
+            <label for="checkbox3">.jpeg</div></label>
+            <input type="checkbox" value="checkbox3" /> 
+        </fieldset>
+    </li>
+    <li>
+        <label for="fileupload">Upload file:</label>
+        <input type="file" value="file" />
+
+    </li>
+    <li>
+        <label for="quantity">Quantaty of prints:</label>
+        <input type="text" name="quantity" id="qty" placeholder="Qty"/>
+    </li>
+    <li>
+        <label for="type">Method of printing:</label>
+        <select name="typeSelect" id="tysel">
+            <option>Filiment</option>
+            <option>Resin</option>
+            <option>Laser Sintering</option>
+        </select> 
+    </li>
+    <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
