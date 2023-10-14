@@ -46,8 +46,8 @@ html{
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 4em;
-    height: 50%;
+    padding: 3em;
+    flex-direction: column;
   }
   li{
     padding: 1em;
