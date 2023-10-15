@@ -15,3 +15,9 @@ images- there is an image on the home page more might be added later
 login- i created a login page
 data base- there is a form for a submission which will send all the info to database once submitted
 websocket- a projected quote will dispaly once submission is given/ username displayed in corner after login
+
+## CSS deliverable
+Added four pages of CSS files, updated all HTML files to have an identiacl header to make it more universal. 
+Updated header, footer and menu to have a universal look between the three different ones. 
+Updated the styles to the main portion of each section, included flex components to allow the screen to be resized. 
+Created a color scheme for the site.
