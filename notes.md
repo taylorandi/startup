@@ -1,11 +1,12 @@
-#CS 260 Notes
-##Github notes
+# CS 260 Notes
+## Github notes
 Notes about git hub, make sure to commit changes and make comments before pushing them onto the server. Commit the changes often and make sure to leave valid and meaningful comments behind them.
 
 ## Midterm Study Guide
 The following questions are examples of what you may see on the midterm exam:
 
 1. In the following code, what does the link element do?
+- the link element is used in 
 2. In the following code,  what does a div tag do?
 3. In the following code, what is the difference between the #title and .grid selector?
 4. In the following code, what is the difference between padding and margin?
