@@ -36,7 +36,14 @@ The following questions are examples of what you may see on the midterm exam:
 28. Which of the following console command creates a remote shell session?
 29. Which of the following is true when the -la parameter is specified for the ls console command?
 30. Which of the following is true for the domain name banana.fruit.bozo.click, which is the top level domain, which is a subdomain, which is a root domain?
+- root domain is bozo.click, the others are the subdomains top level domain is .click
 31. Is a web certificate is necessary to use HTTPS.
+- yes
+- HTTPS sends a message to the server asking for a certificate, the certificate shows the public key and sets up a connection key.
 32. Can a DNS A record can point to an IP address or another A record.
 33. Port 443, 80, 22 is reserved for which protocol?
+- 443 Https
+- 80 http
+- 22 ssh
 34. What will the following code using Promises output when executed?
+- 
