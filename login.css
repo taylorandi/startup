@@ -46,6 +46,7 @@ html{
     display: flex;
     justify-content: center;
     align-content: center;
+    flex-direction: column;
     padding: 4em;
     height: 50%;
   }
