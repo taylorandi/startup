@@ -21,3 +21,9 @@ Added four pages of CSS files, updated all HTML files to have an identiacl heade
 Updated header, footer and menu to have a universal look between the three different ones. 
 Updated the styles to the main portion of each section, included flex components to allow the screen to be resized. 
 Created a color scheme for the site.
+
+## Javascript deliveravle
+Login support- created the logic to store username to local storage and place the username in the right corner of the window.
+database support- register all of the info from the quote request to pass to database at a future point.
+websocket- create a window with dummy values of a quote at $14 a part
+support for interaction logic- 
