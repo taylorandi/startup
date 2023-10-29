@@ -26,4 +26,4 @@ Created a color scheme for the site.
 Login support- created the logic to store username to local storage and place the username in the right corner of the window.
 database support- register all of the info from the quote request to pass to database at a future point.
 websocket- create a window with dummy values of a quote at $14 a part
-support for interaction logic- 
+support for interaction logic- verify that all account values are real and valid, ensure all fields have a value and test password values to match
