@@ -11,6 +11,3 @@ class userName{
     }
     }
 
-    function setItem() {
-        
-    }

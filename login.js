@@ -1,6 +1,6 @@
 class userName{
     constructor() {
-    const playerNameEl = document.querySelector('.User-name');
+    const playerNameEl = document.querySelector('#user');
     playerNameEl.textContent = this.getUserName();
    }
     
@@ -29,5 +29,3 @@ function login() {
     window.location.href = "index.html";
     }
     }
-
-    
