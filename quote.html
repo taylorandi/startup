@@ -14,6 +14,12 @@
         Username:
         <span class="user">Login</span>
       </div>
+      <script>
+        const data = localStorage.getItem("userName");
+      const charText = document.querySelector('span');
+        charText.innerHTML =
+            `<span class="User-name"> ${data} </span>`;
+            </script>
   </header>
     <nav>
         <div><a href="index.html">Home</a></div>

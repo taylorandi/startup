@@ -14,10 +14,16 @@
     <header>
    <h1>Ivy 3D</h1>
   <section>
-    <div class="Username" onload="setItem()">
+    <div class="Username">
         Username:
-        <span class="User-name"></span>
+        <span class="User-name">Login</span>
       </div>
+      <script>
+        const data = localStorage.getItem("userName");
+      const charText = document.querySelector('span');
+        charText.innerHTML =
+            `<span class="User-name"> ${data} </span>`;
+            </script>
  </section>
 </header>
 
