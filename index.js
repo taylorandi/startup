@@ -1,13 +1,6 @@
-class userName{
-    constructor() {
-    const playerNameEl = document.querySelector('#Username');
-    playerNameEl.textContent = this.getUserName();
-   }
+"use strict"
     
-
- getUserName() {
-    var data = JSON.parse(localStorage.getItem("userName"));
-    return data;
-    }
-    }
-
+     // var data = localStorage.getItem("userName");
+      const charText = document.querySelector('div');
+      charText.innerHTML =
+          `   <div class="Username">Username: <span class="User-name"> jose </span>`;
