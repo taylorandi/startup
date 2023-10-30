@@ -1,15 +1,3 @@
-class userName{
-    constructor() {
-    const playerNameEl = document.querySelector('#user');
-    playerNameEl.textContent = this.getUserName();
-   }
-    
-
- getUserName() {
-        return localStorage.getItem('userName') ?? 'Login';
-    }
-    }
-
 function login() {
     const userName = document.querySelector("#Username");
     const email = document.querySelector("#email");
