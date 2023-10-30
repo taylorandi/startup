@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request a Quote</title>
     <link rel="stylesheet" href="quote.css">
+    <script src="quote.js"></script>
   </head>
 <body>
   <header>
@@ -22,21 +23,21 @@
     </nav>
   <main>
     <h1>Request a quote</h1>
-    <form>
+    
     <li>
         <fieldset>
             <legend>File type</legend>
             <label for="checkbox1">.stl</label>
-            <input type="checkbox" value="checkbox1" /> 
+            <input type="checkbox"  id="stl"/> 
             <label for="checkbox2">.cad</label>
-            <input type="checkbox" value="checkbox2" /> 
+            <input type="checkbox" value="checkbox2" id="cad" /> 
             <label for="checkbox3">.jpeg</div></label>
-            <input type="checkbox" value="checkbox3" /> 
+            <input type="checkbox" value="checkbox3" id="jpeg" /> 
         </fieldset>
     </li>
     <li>
         <label for="fileupload">Upload file:</label>
-        <input type="file" value="file" />
+        <input type="file" value="file" id="file" />
 
     </li>
     <li>
@@ -51,8 +52,7 @@
             <option>Laser Sintering</option>
         </select> 
     </li>
-    <button type="submit">Submit</button>
-    </form>
+    <button type="submit" onclick="passValues()">Submit</button>
   </main>
 <footer>
     <a href="https://github.com/taylorandi/startup.git">Github</a>
