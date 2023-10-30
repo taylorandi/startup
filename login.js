@@ -1,3 +1,15 @@
+class userName{
+    constructor() {
+    const playerNameEl = document.querySelector('.User-name');
+    playerNameEl.textContent = this.getUserName();
+   }
+    
+
+ getUserName() {
+        return localStorage.getItem('userName') ?? 'Login';
+    }
+    }
+
 function login() {
     const userName = document.querySelector("#Username");
     const email = document.querySelector("#email");
@@ -14,18 +26,8 @@ function login() {
     }
     else{
     localStorage.setItem("userName", userName.value);
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     }
     }
 
-    class userName{
-    constructor() {
-    const playerNameEl = document.querySelector('.User-name');
-    playerNameEl.textContent = this.getUserName();
-   }
     
-
- getUserName() {
-        return localStorage.getItem('userName') ?? 'Login';
-    }
-    }
