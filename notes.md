@@ -26,7 +26,14 @@ The following questions are examples of what you may see on the midterm exam:
 10. What does the following line of Javascript do using a # selector?
 -the # selector is looking for the element in the HTML identified by its id '#id'
 11. Which of the following are true? (mark all that are true about the DOM)
--
+-with HTML DOM, javascript can access and change elements of the HTML document. 
+-JavaScript can change all the HTML elements in the page
+-JavaScript can change all the HTML attributes in the page
+-JavaScript can change all the CSS styles in the page
+-JavaScript can remove existing HTML elements and attributes
+-JavaScript can add new HTML elements and attributes
+-JavaScript can react to all existing HTML events in the page
+-JavaScript can create new HTML events in the page 
 12. By default, the HTML span element has a default CSS display property value of:
 - 
 13. How would you use CSS to change all the div elements to have a background color of red?
