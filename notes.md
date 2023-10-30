@@ -8,42 +8,70 @@ The following questions are examples of what you may see on the midterm exam:
 1. In the following code, what does the link element do?
 - the link element is used in 
 2. In the following code,  what does a div tag do?
+- div tags are used in HTML to identify a division or a section. seperates off a section so it can be adjusted by the CSS code.
 3. In the following code, what is the difference between the #title and .grid selector?
+-
 4. In the following code, what is the difference between padding and margin?
+-margin sets the marigin spacing or the white space surrounding the element, padding represents the amount of inner space an element has.
 5. Given this HTML and this CSS how will the images be displayed using flex?
+-flex displays an elements children in a flexable manner for resizing purposes. 
 6. What does the following padding CSS do?
+-padding is used to create space arround an elements content inside of predefined boarders. 
 7. What does the following code using arrow syntax function declaration do?
+-arrow functions are compact versions of functions, param => expression. 
 8. What does the following code using map with an array output?
+-map is an itterative function, it will call each element of the array. and constructs a new array with the results, map is a copying method.
 9. What does the following code output using getElementByID and addEventListener?
+-get element id will find the element in the html which is using the id listed as a oarameter. and the addEventlistener is a function which watches the above identified id and executes the code of the listener when the identified id is interacted with.
 10. What does the following line of Javascript do using a # selector?
+-the # selector is looking for the element in the HTML identified by its id '#id'
 11. Which of the following are true? (mark all that are true about the DOM)
-12. By default, the HTML span element has a default CSS display property value of: 
+-
+12. By default, the HTML span element has a default CSS display property value of:
+- 
 13. How would you use CSS to change all the div elements to have a background color of red?
+-
 14. How would you display an image with a hyperlink in HTML?
+-
 15. In the CSS box model, what is the ordering of the box layers starting at the inside and working out?
+-
 16. Given the following HTML, what CSS would you use to set the text "troubl" to green and leave the "double" text unaffected?
+-
 17. What will the following code output when executed using a for loop and console.log?
+-
 18. How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?
+-
 19. What is the opening HTML tag for a paragraph, ordered list, unordered list, second level heading, first level heading, third level heading?
 20. How do you declare the document type to be html?
 21. What is valid javascript syntax for if, else, for, while, switch statements?
+-
 22. What is the correct syntax for creating a javascript object?
+-
 23. Is is possible to add new properties to javascript objects?
+-
 24. If you want to include JavaScript on an HTML page, which tag do you use?
+-
 25. Given the following HTML, what JavaScript could you use to set the text "animal" to "crow" and leave the "fish" text unaffected?
+-
 26. Which of the following correctly describes JSON?
+-
 27. What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?
+-
 28. Which of the following console command creates a remote shell session?
+-
 29. Which of the following is true when the -la parameter is specified for the ls console command?
+-
 30. Which of the following is true for the domain name banana.fruit.bozo.click, which is the top level domain, which is a subdomain, which is a root domain?
 - root domain is bozo.click, the others are the subdomains top level domain is .click
+-
 31. Is a web certificate is necessary to use HTTPS.
 - yes
 - HTTPS sends a message to the server asking for a certificate, the certificate shows the public key and sets up a connection key.
 32. Can a DNS A record can point to an IP address or another A record.
+-
 33. Port 443, 80, 22 is reserved for which protocol?
 - 443 Https
 - 80 http
 - 22 ssh
 34. What will the following code using Promises output when executed?
-- 
+- promises are output by JAvascript after a wait time has been completed, it is designed to wait for an action to complete before outputting the desired output. 
