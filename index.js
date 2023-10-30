@@ -1,7 +1,5 @@
-"use strict"
-    function setItem(){
+
      // var data = localStorage.getItem("userName");
-      const charText = document.querySelector('div');
+      const charText = document.querySelector('span');
       charText.innerHTML =
-          `   <div class="Username">Username: <span class="User-name"> jose </span>`;
-    }
+          `<span class="User-name"> jose </span>`;
