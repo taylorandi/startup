@@ -35,21 +35,30 @@ The following questions are examples of what you may see on the midterm exam:
 -JavaScript can react to all existing HTML events in the page
 -JavaScript can create new HTML events in the page 
 12. By default, the HTML span element has a default CSS display property value of:
-- 
+- span is displayed by default inline. 
 13. How would you use CSS to change all the div elements to have a background color of red?
--
+-you would create a div block of code 
+div{
+    backgroun-color: red;
+}
 14. How would you display an image with a hyperlink in HTML?
--
+-<a href="link address"><img src="image destination"></a>
 15. In the CSS box model, what is the ordering of the box layers starting at the inside and working out?
--
+-content, padding, boarder, margin
 16. Given the following HTML, what CSS would you use to set the text "troubl" to green and leave the "double" text unaffected?
--
+-identify the element in which "troubl" is located and create a new block of code for that element ex.
+h1{
+    color: green;
+}
+-also ensure that "double" is in a different element as "troubl".
 17. What will the following code output when executed using a for loop and console.log?
--
+-javascipt for loops opperate very similar to other for loops in other coding languages.
 18. How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?
 -
 19. What is the opening HTML tag for a paragraph, ordered list, unordered list, second level heading, first level heading, third level heading?
+-
 20. How do you declare the document type to be html?
+-<!DOCTYPE html>
 21. What is valid javascript syntax for if, else, for, while, switch statements?
 -
 22. What is the correct syntax for creating a javascript object?
