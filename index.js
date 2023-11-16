@@ -14,7 +14,7 @@ const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 //get quote
-apiRouter.get('orderId', (req, res) => {res.send(orderrId);});
+apiRouter.get('/orderId', (req, res) => {res.send(orderrId);});
 
 //submit Order Number
 apiRouter.send('orderId', (req,res) => {

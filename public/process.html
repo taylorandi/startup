@@ -37,13 +37,14 @@
         const charText = document.querySelector('label');
             charText.innerHTML =
                 `<label>Initial Quote: $14 a part<label>`;
+
                   async function loadId(){
                     const response = await fetch("/api/orderId")
-                    const scores = await response.json()
+                    const orderId = await response.json()
                   }
       const charText = document.querySelector('.mydiv');
         charText.innerHTML =
-            `Thank your for considering using our sevices your request is being processed: ${response}`;
+            `Thank your for considering using our sevices your request is being processed: ${orderId}`;
             </script>
 
                 </script>
