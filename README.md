@@ -34,4 +34,4 @@ Create an HTTP service using Node.js and Express -
 Frontend served up using express static middleware - 
 frontend calls third party service endpoints - 
 backend provides service endpoints - place holders to pass login info to database as well as pass files to database
-frontend calls service endpoints - this was achieved using curl commands to fetch usernames from database
+frontend calls service endpoints - this was achieved using fetch commands to fetch usernames from database

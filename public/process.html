@@ -28,13 +28,25 @@
     </nav>
   <main>
     <h1>Thank you for considering Ivy 3D</h1>
+    <div id="mydiv"></div>
     <p>From your initial file input our initial quote is listed below. If you chose to continue
          with us we will process the files and give you a more accurate quote in 1-2 days. </p>
    <label>Initial Quote: $<span class="basicquote"></span>
      <label>
-        <script> const charText = document.querySelector('label');
+        <script> 
+        const charText = document.querySelector('label');
             charText.innerHTML =
-                `<label>Initial Quote: $14 a part<label>`;</script>
+                `<label>Initial Quote: $14 a part<label>`;
+                  async function loadId(){
+                    const response = await fetch("/api/orderId")
+                    const scores = await response.json()
+                  }
+      const charText = document.querySelector('.mydiv');
+        charText.innerHTML =
+            `Thank your for considering using our sevices your request is being processed: ${response}`;
+            </script>
+
+                </script>
      
   </main>
 <footer>
