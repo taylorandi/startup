@@ -1,0 +1,68 @@
+html{
+    font.family: Sans,serif;
+    font.size: 16;
+    background: gray;
+    color: white;
+    height: 100%;
+    box-sizing: boarder-box;
+  }
+  body{
+    height: 100%;
+  }
+  header {
+    flex: 0 50px;
+    display: flex;
+    align-items: center;
+    background: black;
+  }
+  section {
+    justfy-content: right;
+    display: flex;
+    
+  }
+  h1 {
+    font.size: 30;
+  }
+  div {
+    padding: 0 0.5em;
+  }
+  a{
+    color: white;
+  }
+  nav { 
+   flex: 0 50px;
+    font.size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background: blue;
+    padding: 0 0.5em;
+  }
+  main{
+    flex: 1;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 3em;
+    flex-direction: column;
+  }
+  li{
+    padding: 1em;
+  }
+  button{
+    padding: 1em;
+    radius: 5px;
+  }
+  footer{
+    flex: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font.size: 24;
+    background: blue;
+  }
+  
+  
