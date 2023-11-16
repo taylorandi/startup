@@ -10,7 +10,7 @@ The following questions are examples of what you may see on the midterm exam:
 2. In the following code,  what does a div tag do?
 - div tags are used in HTML to identify a division or a section. seperates off a section so it can be adjusted by the CSS code.
 3. In the following code, what is the difference between the #title and .grid selector?
--
+- '#' is an id and '.' is a class
 4. In the following code, what is the difference between padding and margin?
 - margin sets the marigin spacing or the white space surrounding the element, padding represents the amount of inner space an element has.
 5. Given this HTML and this CSS how will the images be displayed using flex?
@@ -37,7 +37,7 @@ The following questions are examples of what you may see on the midterm exam:
 12. By default, the HTML span element has a default CSS display property value of:
 - span is displayed by default inline. 
 13. How would you use CSS to change all the div elements to have a background color of red?
--you would create a div block of code 
+- you would create a div block of code 
 div{
     backgroun-color: red;
 }
@@ -46,8 +46,11 @@ div{
 15. In the CSS box model, what is the ordering of the box layers starting at the inside and working out?
 - content, padding, boarder, margin
 16. Given the following HTML, what CSS would you use to set the text "troubl" to green and leave the "double" text unaffected?
--identify the element in which "troubl" is located and create a new block of code for that element ex.
+- identify the element in which "troubl" is located and create a new block of code for that element ex., or it it has a different class it can be modified with the .class or #id
 h1{
+    color: green;
+}
+p.class / p#id {
     color: green;
 }
 - also ensure that "double" is in a different element as "troubl".

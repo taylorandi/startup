@@ -22,9 +22,16 @@ Updated header, footer and menu to have a universal look between the three diffe
 Updated the styles to the main portion of each section, included flex components to allow the screen to be resized. 
 Created a color scheme for the site.
 
-## Javascript deliveravle
+## Javascript deliveravble
 Login support- created the logic to store username to local storage and place the username in the right corner of the window. 
 - after many many many hours of trying over the weekend I was unable to propperly implement this feature, will need to get help to do it correctly however I need to turn in something because it is already late and the deadline will pass.
 database support- register all of the info from the quote request to pass to database at a future point.
 websocket- create a window with dummy values of a quote at $14 a part, process.html is the page which will have that code, it will populate when a database recieves the files for a quote.
 support for interaction logic- verify that all account values are real and valid, ensure all fields have a value and test password values to match
+## Services deliverable
+for this deliverable I created back end points to prepare for next setps of pushing info to database and so on
+Create an HTTP service using Node.js and Express - 
+Frontend served up using express static middleware - 
+frontend calls third party service endpoints - 
+backend provides service endpoints - place holders to pass login info to database as well as pass files to database
+frontend calls service endpoints - this was achieved using curl commands to fetch usernames from database
