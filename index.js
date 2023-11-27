@@ -14,10 +14,10 @@ const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 //get quote
-apiRouter.get('/orderId', (req, res) => {res.send(orderrId);});
+apiRouter.get('/orderId', (req, res) => {res.send(orderId);});
 
 //submit Order Number
-apiRouter.send('orderId', (req,res) => {
+apiRouter.post('/orderId', (req,res) => {
   orderrId = UpdateId(req.body, orderrId);
   res.send(orderrId);
 })
