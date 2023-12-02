@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request a Quote</title>
     <link rel="stylesheet" href="quote.css">
+    <script src="process.js"></script>
+
   </head>
 <body>
   <header>
@@ -28,27 +30,11 @@
     </nav>
   <main>
     <h1>Thank you for considering Ivy 3D</h1>
-    <div id="mydiv"></div>
-    <p>From your initial file input our initial quote is listed below. If you chose to continue
-         with us we will process the files and give you a more accurate quote in 1-2 days. </p>
-   <label>Initial Quote: $<span class="basicquote"></span>
-     <label>
-        <script> 
-        const charText = document.querySelector('.mydiv');
-            charText.innerHTML =
-                `<label>Initial Quote: $14 a part<label>`;
-
-                  async function loadId(){
-                    const response = await fetch("/api/orderId")
-                    const orderId = await response.json()
-                  }
-      const charText = document.querySelector('.mydiv');
-        charText.innerHTML =
-            `Thank your for considering using our sevices your request is being processed: ${orderId}`;
-            </script>
-
-                </script>
-     
+    <p>Thank you for choosing Ivy 3D your order: 
+    <div id="order" class="quote-box bg-light text-dark"></div>
+     is being processed </p>
+    <p>From your initial file input our initial quote is being processed. 
+      We will process the files and provide you a more quote in 1-2 days. </p>  
   </main>
 <footer>
     <a href="https://github.com/taylorandi/startup.git">Github</a>
