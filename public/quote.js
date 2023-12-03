@@ -12,7 +12,7 @@ function passValues() {
   }
 
   //updating to the next order number, will require database to better function. using place holder of one for now
-  orderId = 1;
+  orderId.orderId = 1;
   async function setId(orderId){
     const userName = localStorage.getItem("userName");
     const newOrder = {name: userName, orderId: orderId, date: date}
@@ -31,3 +31,4 @@ function passValues() {
   }
   window.location.href = "process.html";
 }
+passValues();
