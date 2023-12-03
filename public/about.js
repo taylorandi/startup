@@ -4,7 +4,7 @@ function displayQuote(data) {
       .then((data) => {
         const containerEl = document.querySelector('#quote');
   
-        const quoteEl = document.createElement('p');
+       const quoteEl = document.createElement('p');
         quoteEl.classList.add('quote');
         const authorEl = document.createElement('p');
         authorEl.classList.add('author');
