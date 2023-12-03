@@ -19,7 +19,7 @@ async function displayId() {
 
 function displayOrder(orderNum) {
     const tableBodyEl = document.querySelector('#order');
-    tableBodyEl.appendChild(orderNum);
+    tableBodyEl.innerHTML = `Your Order Number is: ${orderNum}`;
 }
 
 
