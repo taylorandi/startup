@@ -7,6 +7,8 @@ function passValues() {
   const type = document.querySelector("#tysel");
 
   //updating to the next order number, will require database to better function. using place holder of one for now
+  const orderId = 1;
+  setId(orderId);
   window.location.href = "process.html";
 }
 
@@ -24,6 +26,7 @@ function passValues() {
       const order = await response.json();
       localStorage.setItem('orderId', JSON.stringify(newOrder));
     } catch {
+      localStorage.setItem('orderId', JSON.stringify(newOrder));
     }
   }
   
