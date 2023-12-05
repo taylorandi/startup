@@ -30,8 +30,8 @@ websocket- create a window with dummy values of a quote at $14 a part, process.h
 support for interaction logic- verify that all account values are real and valid, ensure all fields have a value and test password values to match
 ## Services deliverable
 for this deliverable I created back end points to prepare for next setps of pushing info to database and so on
-Create an HTTP service using Node.js and Express - 
-Frontend served up using express static middleware - 
-frontend calls third party service endpoints - 
+Create an HTTP service using Node.js and Express - done!!
+Frontend served up using express static middleware - done!! 
+frontend calls third party service endpoints -  inserted an inspirational quote into the services section.
 backend provides service endpoints - place holders to pass login info to database as well as pass files to database
 frontend calls service endpoints - this was achieved using fetch commands to fetch usernames from database
