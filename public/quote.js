@@ -27,7 +27,7 @@ function passValues() {
       const order = await response.json();
       localStorage.setItem('orderId', JSON.stringify(newOrder));
     } catch {
-      localStorage.setItem('orderId', JSON.stringify(newOrder));
+      
     }
   }
   
