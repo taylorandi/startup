@@ -42,10 +42,7 @@ function passValues() {
 
     } catch {
         // If there was an error then just use the last saved scores
-        const scoresText = localStorage.getItem('orderId');
-        if (scoresText) {
-            orderNum = JSON.parse(scoresText);
-        }
+        orderNum.orderId = 1;
     }
     return orderNum.orderId;
   }
