@@ -16,7 +16,7 @@ const orderCollection = db.collection('order');
 });
 
 async function addOrderNum(orderNum) {
-  const result = await orderCollectionCollection.insertOne(orderNum);
+  const result = await orderCollection.insertOne(orderNum);
   return result;
 }
 
@@ -26,7 +26,7 @@ function getOrderNum() {
     sort: { orderNum: -1 },
     limit: 10,
   };
-  const cursor = orderCollectionCollection.find(query, options);
+  const cursor = orderCollection.find(query, options);
   return cursor.toArray();
 }
 
