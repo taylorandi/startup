@@ -14,7 +14,7 @@ const orderCollection = db.collection('order');
   process.exit(1);
 });
 
-async function addOrder(orderNum) {
+async function addOrderNum(orderNum) {
   const result = await orderCollectionCollection.insertOne(orderNum);
   return result;
 }
@@ -29,4 +29,4 @@ function getOrderNum() {
   return cursor.toArray();
 }
 
-module.exports = { addOrder, getOrderNum };
+module.exports = { addOrderNum, getOrderNum };

@@ -16,13 +16,13 @@ app.use(`/api`, apiRouter);
 
 //get quote
 apiRouter.get('/orderId', async (_req, res) => {
-  const order = await DB.getHighScores();
+  const order = await DB.getOrderNum();
   res.send(order);
 });
 
 //submit Order Number
 apiRouter.post('/oderId', async (req, res) => {
-  DB.addOrder(req.body);
+  DB.addOrderNum(req.body);
   const orderId= await DB.getOrderNum();
   res.send(orderId);
 });
