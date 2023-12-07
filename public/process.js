@@ -1,8 +1,7 @@
 async function displayId() {
     orderNum = [];
     try {
-        // Get the highest order from the service
-        //will further implement to search for username
+        // Get the latest high scores from the service
         const response = await fetch('/api/orderId');
         orderNum = await response.json();
 
@@ -20,6 +19,8 @@ async function displayId() {
 
 function displayOrder(orderNum) {
     const tableBodyEl = document.querySelector('#order');
+    const orderEl = document.createElement('p');
+    orderEl.textContent = orderNum.name;
     tableBodyEl.innerHTML = `Your Order Number is: ${orderNum.orderId}`;
 }
 

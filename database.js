@@ -20,8 +20,8 @@ async function addOrderNum(orderNum) {
   return result;
 }
 
-function getOrderNum() {
-  const query = { orderId: { $gt: 0, $lt: 900 } };
+function getOrderNum(userName) {
+  const query = { userName: {userName}} ;
   const options = {
     sort: { orderId: -1 },
     limit: 10,
