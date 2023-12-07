@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const DB = require('./database.js');
 
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
 
@@ -14,13 +15,17 @@ const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 //get quote
-apiRouter.get('/orderId', (req, res) => {res.send(orderId);});
+apiRouter.get('/orderId', async (_req, res) => {
+  const order = await DB.getHighScores();
+  res.send(order);
+});
 
 //submit Order Number
-apiRouter.post('/orderId', (req,res) => {
-  orderrId = UpdateId(req.body, orderrId);
-  res.send(orderrId);
-})
+apiRouter.post('/oderId', async (req, res) => {
+  DB.addOrder(req.body);
+  const orderId= await DB.getOrderNum();
+  res.send(orderId);
+});
 
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
