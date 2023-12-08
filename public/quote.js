@@ -1,4 +1,4 @@
-function passValues() {
+async function passValues() {
   const stl = document.querySelector("#stl:checked");
   const jpeg = document.querySelector("#jpeg:checked");
   document.querySelector("#cad:checked");
