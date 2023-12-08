@@ -14,7 +14,7 @@ function login() {
     }
     else {
         localStorage.setItem("userName", userName.value);
-        const newUser = { name: userName, email: email, password: passwd };
+        const newUser = { name: userName.value, email: email.value, password: passwd.value };
         //value of newUser will be passed to the database once that is implemented.
         //for security purposes I am chosing to do nothing with these values right now 
         //until I get to encripting passwords and pushing to a more secure database
