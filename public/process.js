@@ -21,7 +21,7 @@ function displayOrder(orderNum) {
     const tableBodyEl = document.querySelector('#order');
     const orderEl = document.createElement('p');
     orderEl.textContent = orderNum.name;
-    tableBodyEl.innerHTML = `Your Order Number is: ${orderNum.name}`;
+    tableBodyEl.innerHTML = `Your Order Number is: ${orderNum.orderId}`;
 }
 
 
