@@ -15,7 +15,7 @@ async function passValues() {
 async function setId(ordernum) {
   const userName = localStorage.getItem("userName");
   const date = new Date().toLocaleDateString();
-  const newOrder = { name: userName, orderId: ordernum, date: date, document: document, qty: qty, type: type };
+  const newOrder = { name: userName, orderId: ordernum, date: date, document: selectedFile, qty: qty, type: type };
   try {
     const response = await fetch('/api/orderId', {
       method: 'POST',
