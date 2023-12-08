@@ -7,10 +7,30 @@ async function passValues() {
   const tysel = document.querySelector("#tysel");
 
   //updating to the next order number, will require database to better function. using place holder of one for now
-  const orderId = 1;
-  setId(orderId);
-  window.location.href = "process.html";
+  getPrevOrderNum();
+  
 }
+
+async function getPrevOrderNum(){
+  order = 1;
+    try {
+        // Get the latest high scores from the service
+        const response = await fetch('/api/orderId');
+        order = await response.json();
+
+
+    } catch {
+        // If there was an error then just use the last saved scores
+        const scoresText = localStorage.getItem('orderId');
+        if (scoresText) {
+            order = JSON.parse(scoresText);
+        }
+    }
+    
+    var number = order[0].orderId;
+    setId(number + 1);
+}
+
 
 async function setId(ordernum) {
   const userName = localStorage.getItem("userName");
@@ -29,4 +49,6 @@ async function setId(ordernum) {
   } catch {
 
   }
+  window.location.href = "process.html";
 }
+

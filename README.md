@@ -38,4 +38,5 @@ frontend calls service endpoints - this was achieved using fetch commands to fet
 ## DB deliverable
 I have created a mongo DB account to push user orders from the order information page.
 I now process and send my data to the database. 
-Data is now stored in the MongoDb
+Data is now stored in the MongoDb.
+Database is utilized to remove the highest order number when a quote is requested to increment the new order request by one, which will be noted in the process.html folder.

@@ -21,13 +21,8 @@ async function addOrderNum(orderNum) {
 }
 
 function getOrderNum() {
-  const query = { orderId: { $gt: 0, $lt: 900 } };
-  const options = {
-    sort: { orderId: -1 },
-    limit: 10,
-  };
-  const cursor = orderCollection.find(query, options);
-  return cursor.toArray();
+  const cursor = orderCollection.find().sort({orderId:-1}).limit(1);
+  return cursor;
 }
 
 module.exports = { addOrderNum, getOrderNum };
