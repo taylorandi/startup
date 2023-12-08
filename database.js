@@ -22,7 +22,7 @@ async function addOrderNum(orderNum) {
 
 function getOrderNum() {
   const cursor = orderCollection.find().sort({orderId:-1}).limit(1);
-  return cursor;
+  return cursor.toArray();
 }
 
 module.exports = { addOrderNum, getOrderNum };
