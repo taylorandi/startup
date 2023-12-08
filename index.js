@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Router for service endpoints
-const apiRouter = express.Router();
+var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 //get quote

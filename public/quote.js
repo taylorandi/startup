@@ -12,22 +12,21 @@ function passValues() {
   window.location.href = "process.html";
 }
 
-  async function setId(orderId){
-    const userName = localStorage.getItem("userName");
-    const date = new Date().toLocaleDateString();
-    const newOrder = {name: userName, orderId: orderId, date: date}
-    try {
-      const response = await fetch('/api/orderId', {
-        method: 'POST',
-        headers: {'content-type': 'application/json'},
-        body: JSON.stringify(newOrder),
-      });
+async function setId(ordernum) {
+  const userName = localStorage.getItem("userName");
+  const date = new Date().toLocaleDateString();
+  const newOrder = { name: userName, orderId: ordernum, date: date };
+  try {
+    const response = await fetch('/api/orderId', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(newOrder),
+    });
 
-      // Store the new order
-      const order = await response.json();
-      localStorage.setItem('orderId', JSON.stringify(newOrder));
-    } catch {
-      
-    }
+    // Store the new order
+    const order = await response.json();
+    localStorage.setItem('orderId', JSON.stringify(newOrder));
+  } catch {
+
   }
-  
+}
