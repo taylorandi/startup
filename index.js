@@ -21,7 +21,7 @@ apiRouter.get('/orderId', async (_req, res) => {
 });
 
 //submit Order Number
-apiRouter.post('/oderId', async (req, res) => {
+apiRouter.post('/orderId', async (req, res) => {
   DB.addOrderNum(req.body);
   const orderId= await DB.getOrderNum();
   res.send(orderId);
