@@ -4,7 +4,7 @@ const config = require('./dbconfig.json');
 const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostname}`;
 const client = new MongoClient(url);
 const db = client.db('startup');
-const orderCollection = db.collection('order');
+const orderCollection = db.collection('orders');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
