@@ -6,30 +6,30 @@ async function loginUser() {
     loginOrCreate(`/api/auth/create`);
   }
 
-async function loginOrCreate() {
-    const userName = document.querySelector("#Username");
-    const email = document.querySelector("#email");
-    const passwd = document.querySelector("#password");
-    const passwdver = document.querySelector("#passwordver");
-    if (userName.value == null || userName.value == "") {
+async function loginOrCreate(endpoint) {
+    const userName = document.querySelector("#Username")?.value;
+    const email = document.querySelector("#email")?.value;
+    const passwd = document.querySelector("#password")?.value;
+    const passwdver = document.querySelector("#passwordver")?.value;
+    if (userName == null || userName == "") {
         alert("Username must contain a value");
     }
-    else if (email.value == null || email.value == "") {
+    else if (email == null || email == "") {
         alert("enter a valid email");
     }
-    else if (passwd.value != passwdver.value) {
+    else if (passwd != passwdver) {
         alert("Password values must match");
     }
     else {
         const response = await fetch(endpoint, {
             method: 'post',
-            body: JSON.stringify({ email: email, password: password }),
+            body: JSON.stringify({ email: email, password: passwd }),
             headers: {
               'Content-type': 'application/json; charset=UTF-8',
             },
           });
           if (response.ok) {
-            localStorage.setItem('userName', userName.value);
+            localStorage.setItem('userName', userName);
             window.location.href = 'play.html';
           } else {
             const body = await response.json();
@@ -38,11 +38,12 @@ async function loginOrCreate() {
             const msgModal = new bootstrap.Modal(modalEl, {});
             msgModal.show();
           }
+          window.location.href = "index.html";
         }
         //value of newUser will be passed to the database once that is implemented.
         //for security purposes I am chosing to do nothing with these values right now 
         //until I get to encripting passwords and pushing to a more secure database
-        window.location.href = "index.html";
+       
     }
 
     function logout() {
