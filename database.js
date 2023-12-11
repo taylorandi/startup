@@ -5,6 +5,7 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('startup');
 const orderCollection = db.collection('orders');
+const userCollection = db.collection('user')
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -14,6 +15,29 @@ const orderCollection = db.collection('orders');
   console.log(`Unable to connect to database with ${url} because ${ex.message}`);
   process.exit(1);
 });
+
+function getUser(email) {
+  return userCollection.findOne({ email: email });
+}
+
+function getUserByToken(token) {
+  return userCollection.findOne({ token: token });
+}
+
+async function createUser(email, password) {
+  // Hash the password before we insert it into the database
+  const passwordHash = await bcrypt.hash(password, 10);
+
+  const user = {
+    email: email,
+    password: passwordHash,
+    token: uuid.v4(),
+  };
+  await userCollection.insertOne(user);
+
+  return user;
+}
+
 
 async function addOrderNum(orderNum) {
   const result = await orderCollection.insertOne(orderNum);
@@ -25,4 +49,4 @@ function getOrderNum() {
   return cursor.toArray();
 }
 
-module.exports = { addOrderNum, getOrderNum };
+module.exports = { addOrderNum, getOrderNum, getUser, getUserByToken, createUser};
