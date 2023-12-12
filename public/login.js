@@ -30,15 +30,12 @@ async function loginOrCreate(endpoint) {
           });
           if (response.ok) {
             localStorage.setItem('userName', userName);
-            window.location.href = 'play.html';
+            window.location.href = "index.html";
           } else {
             const body = await response.json();
-            const modalEl = document.querySelector('#msgModal');
-            modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
-            const msgModal = new bootstrap.Modal(modalEl, {});
-            msgModal.show();
+            alert("Could not log in");
           }
-          window.location.href = "index.html";
+          
         }
         //value of newUser will be passed to the database once that is implemented.
         //for security purposes I am chosing to do nothing with these values right now 

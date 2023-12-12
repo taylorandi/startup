@@ -16,10 +16,16 @@
         <span class="user">Login</span>
       </div>
       <script>
-        const data = localStorage.getItem("userName");
-      const charText = document.querySelector('span');
-        charText.innerHTML =
-            `<span class="User-name"> ${data} </span>`;
+         const data = localStorage.getItem("userName");
+                if(data != null){
+              const charText = document.querySelector('span');
+                charText.innerHTML =
+                    `<span class="User-name"> ${data} </span>`;
+                }
+                else{
+                    charText.innerHTML =
+                    `<span class="User-name"> <a href="login.html">Login</a> </span>`;
+                }
             </script>
   </header>
     <nav>

@@ -20,9 +20,15 @@
       </div>
       <script>
         const data = localStorage.getItem("userName");
-      const charText = document.querySelector('span');
-        charText.innerHTML =
-            `<span class="User-name"> ${data} </span>`;
+                if(data != null){
+              const charText = document.querySelector('span');
+                charText.innerHTML =
+                    `<span class="User-name"> ${data} </span>`;
+                }
+                else{
+                    charText.innerHTML =
+                    `<span class="User-name"> <a href="login.html">Login</a> </span>`;
+                }
             </script>
  </section>
 </header>
