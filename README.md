@@ -41,3 +41,5 @@ I now process and send my data to the database.
 Data is now stored in the MongoDb.
 Database is utilized to remove the highest order number when a quote is requested to increment the new order request by one, which will be noted in the process.html folder.
 I want able to figure out how to push the file so I opted to do what I could with my database, it works and does take and send values, I am not pushing user information onto the database until I figure out encription for security purposes.
+## login deliverable
+I have implemented a way to login or create an account, if an account does not exist it will not login, i am hashing passwords before passing them to the database and have created a way to verify user information durring login, i have also implemented a logout function which logs a user out of the system when clicked.
