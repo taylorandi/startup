@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="services.css">
+
+
+    <title>Ivy 3D</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ivy 3D</h1>
+        <section>
+            <div class="Username">
+                Username:
+                <span class="User-name">Login</span>
+            </div>
+            <script>
+                const data = localStorage.getItem("userName");
+                if (data != null) {
+                    const charText = document.querySelector('span');
+                    charText.innerHTML =
+                        `<span class="User-name"> ${data} </span>`;
+                }
+                else {
+                    charText.innerHTML =
+                        `<span class="User-name"> <a href="login.html">Login</a> </span>`;
+                }
+            </script>
+
+        </section>
+    </header>
+
+
+    <nav>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="login.html">Login or an crate account</a></div>
+        <div><a href="quote.html">Request a quote</a></div>
+        <div><a href="services.html">Services</a></div>
+    </nav>
+    <main>
+        <sec>
+            <h2>Chat with one of our representatives</h2>
+            <div class="user" id="user">Login</div>
+            <script>
+                if (data != null) {
+                    const userText = document.querySelector('#user');
+                    userText.innerHTML =
+                        `User: ${data}`;
+                }
+                else {
+                    userText.innerHTML =
+                        `<a href="login.html">Login before continuing</a>`;
+                }
+            </script>
+            <fieldset id="chat-controls" disabled>
+                <legend>Chat</legend>
+                <input id="new-msg" type="text" />
+                <button onclick="sendMessage()">Send</button>
+            </fieldset>
+            <div id="chat-text"></div>
+            <script src="chat.js"></script>
+        </sec>
+
+    </main>
+    <footer>
+        <a href="https://github.com/taylorandi/startup.git">Github</a>
+    </footer>
+</body>
+
+</html>
