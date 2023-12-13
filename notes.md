@@ -110,24 +110,43 @@ p.class / p#id {
 
 ## Final study guide
 1. What ports are used for HTTP, HTTPS, SSH?
-2. What do HTTP status codes in the 300, 400, 500 range indicate?
-3. What does the HTTP header content-type allows you to do?
-4. What do the following attributes of a cookie do?
-- Domain
-- Path
-- SameSite
-- HTTPOnly
-5. Assuming the following Express middleware, what would be the console.log output for an HTTP GET request with a URL path of /foo/bar?
-6. Given the following Express service code: What does the following JavaScript fetch return?
-7. Given the following MongoDB query
+- HTTP uses port 80, HTTPS uses 443, and SSH uses 22
 
+2. What do HTTP status codes in the 300, 400, 500 range indicate?
+- code 300 is redirection, 400 is client errors, and 500 is server errors
+
+3. What does the HTTP header content-type allows you to do?
+- indicates the origional media type of the resource
+
+4. What do the following attributes of a cookie do?
+- Domain -> 
+- Path -> 
+- SameSite ->
+- HTTPOnly -> 
+
+5. Assuming the following Express middleware, what would be the console.log output for an HTTP GET request with a URL path of /foo/bar?
+- 
+
+6. Given the following Express service code: What does the following JavaScript fetch return?
+- 
+
+7. Given the following MongoDB query
 { cost: { $gt: 10 }, name: /fran.*/}
 select all of the matching documents.
+- 
 
-8. How should you store user passwords in a database?
+8. How should you store user passwords in a database? 
+- hashed and salted
+
 9. Assuming the following Node.js service code is executing with websockets, what will be logged to the console of the web browser?
+- (study websocket code, what the code does wss.on('connection') , on('close'), and on('message')) 
+
 10. What is the WebSocket protocol used for?
+- instantanious client and server connection where either the client or server can initiate contact
+
 11. What is JSX and how are the curly braces rendered?
+- jsx javascript and html squished together, anything after return is rendered to the screen
+
 12. Assuming a HTML document with a 
 <div id="root"></div>
 element, what content will the following React component generate?
@@ -145,6 +164,8 @@ element, what content will the following React component generate?
       }
       const root = ReactDOM.createRoot(document.getElementById('root'));
       root.render(<App />);
+- renders the list Hello, name for all three people.
+
 13. Assuming a HTML document with a 
 <div id="root"></div>
 element, what content will the following React component generate?
@@ -157,6 +178,8 @@ element, what content will the following React component generate?
     }
     const root = ReactDOM.createRoot(document.getElementById('root')); 
     root.render(<Numbers/>);
+- print the unordered list for the numbers with bullet points.
+
 14. What does the following React component do?
 function Example() {
   // Declare a new state variable, which we'll call "count"  
@@ -170,8 +193,14 @@ function Example() {
     </div>
   );
 }
+- it counts the number of times a button has been clicked and prints it to the screen, increases the count by one after every click
+
 15. What are React Hooks used for?
+- modyfies the state of the component, and handles lifecycle events of a component
+
 16. What is the useEffect hook used for?
+- watches the lifecycle events for the component and runs stuff based on those events. (rerender, watch initial load, whenever a var is changed, when it is destroyed or no longer rendered) (basically updated code when things change)
+
 17. What does this code do?
 export default function App() {
   return (
@@ -187,8 +216,19 @@ export default function App() {
     </BrowserRouter>
   );
 }
+- renders the router, will dictate the path and what element will be rendered there <Contacts />  will render contacts elements.
+
 18. What role does npm play in web development?
+- manages your node packages and download external packages
+
 19. What does package.json do in a npm project?
+- holds the third party packages, lists them, when deploys it tells what deploys with the system, also contains name, version, description, main file
+
 20. What does the fetch function do?
+- 
+
 21. What does node.js do?
+- runs the server
+
 22. What does Vite do?
+- allows us to bundle all components (especially react components) together for production so it can be deployed to the server, transposes jsx code to regular javascript, so that it can be run by the server.
