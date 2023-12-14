@@ -40,18 +40,21 @@ html{
     background: blue;
     padding: 0 0.5em;
   }
+
   main{
     flex: 1;
     margin: 0;
     display: flex;
+    flex-direction: column;
     
   }
-  sec {
+  .about {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0 0.5em;
   }
+
   footer{
     flex: 0 50px;
     display: flex;
