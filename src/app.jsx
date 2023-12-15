@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Home } from './home/home';
 import { Login } from './login/login';
-import { Service } from './service/service';
+import { Service } from './services/service';
 import { Quote } from './quote/quote';
 import './app.css';
 
@@ -43,7 +43,7 @@ export default function App() {
                 <Routes>
                     <Route path='/' element={<Home />} exact />
                     <Route path='/login' element={<Login />} />
-                    <Route path='/service' element={<Service />} />
+                    <Route path='/services' element={<Service />} />
                     <Route path='/quote' element={<Quote />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>

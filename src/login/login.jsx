@@ -1,30 +1,77 @@
 import React from "react";
 import './login.css'
 
-export function Login(){
-    return (
-        <main>
-        <li>
-            <label for="Username">Username:</label>
-            <input type="text" id="Username" placeholder="Username"/>
-        </li>
-        <li>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="varemail" placeholder="me@.me.com"/>
-        </li>
-        <li>
-            <label for="password">Password:</label>
-            <input type="password" name="userPassword" id="password"/>
-            </li>
-            <li>
-            <label for="passwordver">Verify Password:</label>
-            <input type="password" name="userPasswordver" id="passwordver"/>
-        </li>
-        <button className-="btn btn-primary" onclick="loginUser()">Login</button>
-        <button className="btn-primary" onclick="createUser()">Create Account</button>
-        <button className="btn-primary" onclick="logout()">logout</button>
+export function Login(props){
+    const [userName, setUserName] = React.useState(props.userName);
+    const [email, setUserEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [displayError, setDisplayError] = React.useState(null);
 
-    
-    </main>
+  async function loginUser() {
+    loginOrCreate(`/api/auth/login`);
+  }
+
+  async function createUser() {
+    loginOrCreate(`/api/auth/create`);
+  }
+
+  async function loginOrCreate(endpoint) {
+    const response = await fetch(endpoint, {
+      method: 'post',
+      body: JSON.stringify({email: email, password: password}),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+    if (response?.status === 200) {
+      localStorage.setItem('userName', userName);
+      props.onLogin(userName);
+    } else {
+      const body = await response.json();
+      setDisplayError(`⚠ Error: ${body.msg}`);
+    }
+  }
+
+    return (
+        <>
+        <div>
+          <div className='input-group mb-3'>
+            <span className='input-group-text'>Username: </span>
+            <input
+              className='form-control'
+              type='text'
+              onChange={(e) => setUserName(e.target.value)}
+              placeholder='username'
+            />
+            </div>
+            <div>
+            <span className='input-group-text'>Email: </span>
+            <input
+              className='form-control'
+              type='text'
+              value={email}
+              onChange={(e) => setUserEmail(e.target.value)}
+              placeholder='your@email.com'
+            />
+          </div>
+          <div className='input-group mb-3'>
+            <span className='input-group-text'>Password: </span>
+            <input
+              className='form-control'
+              type='text'
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder='password'
+            />
+          </div>
+          <button variant='primary' onClick={() => loginUser()}>
+            Login
+          </button>
+          <button variant='secondary' onClick={() => createUser()}>
+            Create
+          </button>
+        </div>
+  
+        
+      </>
     );
 }
